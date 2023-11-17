@@ -1,5 +1,7 @@
 CREATE DATABASE db_spiderman;
 
+USE db_spiderman;
+
 CREATE TABLE
     user (
         id INT PRIMARY KEY,

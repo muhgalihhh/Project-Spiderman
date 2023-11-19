@@ -31,7 +31,6 @@ img {
     width: 20%;
     position: absolute;
     border-radius: 10px;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
     top: 23%;
     left: 15%;
 }

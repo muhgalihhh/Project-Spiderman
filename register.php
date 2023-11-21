@@ -1,3 +1,21 @@
+<?php
+    require_once "koneksi.php";
+    if(isset($_POST['register'])){
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $query = mysqli_query($koneksi, "INSERT INTO user (username, email, password,role) VALUES ('$username', '$email', '$password','user')");
+        if($query){
+            echo "<script>alert('Berhasil Daftar!'); window.location.href='login.php';</script>";
+        }else{
+            echo "<script>alert('Gagal Daftar!'); window.location.href='register.php';</script>";
+        }
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -13,6 +31,7 @@
     <body>
         <div class="box"></div>
         <div class="content">
+            <form action="" method="post">
             <p>REGISTER</p>
             <div class="input username">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40" viewBox="0 0 38 40" fill="none" class="img-form">
@@ -44,19 +63,9 @@
                 <a href="#"> Forgot Password?</a>
             </div>
             <div class="btn">
-                <button id="login" class="btn-login">Login</button>
-                <script>
-                    document.getElementById('login').addEventListener('click', function() {
-                        window.location.href = 'login.html'; 
-                    });
-                </script>
-                <button id="register" class="btn-register">Register</button>
-                <script>
-                    document.getElementById('register').addEventListener('click', function() {
-                        alert ('Berhasil Daftar!');
-                        window.location.href = 'home.html'; 
-                    });
-                </script>
+                <a href="login.php" id="login" class="btn-login">Login</a>
+                <button id="register" type="submit" name="register" class="btn-register">Register</button>
+                </form>
             </div>
         </div>
         <img src="images/spiderman.png" class="spider">

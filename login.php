@@ -1,3 +1,30 @@
+<?php
+    require_once "koneksi.php";
+    if (isset($_POST['login'])){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        
+        $query = mysqli_query($koneksi, "SELECT * FROM user WHERE email = '$email'");
+        $data = mysqli_fetch_array($query);
+        
+        if ($data && password_verify($password, $data['password'])) {
+            session_start();
+            $_SESSION['username'] = $data['username'];
+            $_SESSION['email'] = $email;
+            $_SESSION['status'] = "login";
+            $_SESSION["role"] = $data['role']; // Ganti "role" dengan kolom yang sesuai pada tabel
+            
+            if ($_SESSION["role"] == "admin") {
+                echo "<script>alert('Berhasil Login!'); window.location.href='admin.php';</script>";
+            } else if ($_SESSION["role"] == "user") {
+                echo "<script>alert('Berhasil Login!'); window.location.href='home.php';</script>";
+            }
+        } else {
+            echo "<script>alert('Gagal Login!'); window.location.href='login.php';</script>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -39,19 +66,8 @@
                 <a href="#"> Forgot Password?</a>
             </div>
             <div class="btn">
-                <button id="login" class="btn-login">Login</button>
-                <script>
-                    document.getElementById('login').addEventListener('click', function() {
-                        alert ('Berhasil Login!');
-                        window.location.href = 'home.html'; 
-                    });
-                </script>
-                <button id="register" class="btn-register">Register</button>
-                <script>
-                    document.getElementById('register').addEventListener('click', function() {
-                        window.location.href = 'register.html'; 
-                    });
-                </script>
+                <button type="submit" name="login" id="login" class="btn-login">Login</button>
+                <a href="register.php" id="register" class="btn-register">Register</a>
             </div>
             </form>
         </div>

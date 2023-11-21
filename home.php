@@ -1,11 +1,24 @@
+<?php
+    session_start();
+    // jika session role kosong 
+    if(!isset($_SESSION['role'])){
+        header('location:login.php');
+    }
+    
+    
+?>
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="home.css">
-        <title>Home</title>
-        <!–[if lt IE 9]> <script src=”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”></script> <![endif]–>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
+    <!–[if lt IE 9]>
+        <script src=”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”></script>
+        <![endif]–>
     </head>
     <body>
         <div class="header">
@@ -17,8 +30,7 @@
                 <button id="button" class="logout">LOGOUT</button>
                 <script>
                     document.getElementById('button').addEventListener('click', function() {
-                        alert('Berhasil Logout!');
-						window.location.href = 'login.html'; 
+                        window.location.href = 'logout.php'; 
                     });
                 </script>
             </div>

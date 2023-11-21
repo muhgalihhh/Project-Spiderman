@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(117deg, #F23C27 1.13%, rgba(144, 39, 36, 0.91) 74.23%);
+    background-size: cover;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    background: #1A323E;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.icon {
+    width: 10%;
+    height: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.nav {
+    position: relative;
+    left: 50%;
+    height: 60%;
+    width: 50%;
+    bottom: 60%;
+}
+
+.nav a {
+    position: relative;
+    top: 20%;
+    margin-left: 80px;
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.movies {
+    color: #F7D281;
+}
+
+.link {
+    color: #fff;
+}
+
+.logout {
+    margin-left: 70px;
+    position: relative;
+    top: 10%;
+    height: 80%;
+    width: 15%;
+    border-radius: 35px;
+    background: #902724;
+    border: none;
+    cursor: pointer;
+}
+
+.back {
+    background-color: #902724;
+    color: #F7D281;
+    border: 3px solid #F7D281;
+    position: relative;
+    left: 50%;
+    bottom: 100%;
+    width: 15%;
+    height: 10%;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.desc {
+    width: 90%;
+    height: 50%;
+    position: relative;
+    left: 5%;
+    top: 5%;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.right img {
+    width: 40%;
+    height: 100%;
+    position: relative;
+    left: 30%;
+}
+
+.left h1 {
+    color: #FFF;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: 20%;
+    top: 5%;
+}
+
+svg {
+    margin-top: 40px;
+    position: relative;
+    left: 20%;
+}
+
+.rate {
+    color: #F7D281;
+    font-family: Inter;
+    position: relative;
+    left: 45%;
+    bottom: 6%;
+}
+
+.left button {
+    color: #F7D281;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 20px;
+    width: 15%;
+    height: 10%;
+    position: relative;
+    left: 20%;
+    top: 5%;
+}
+
+.trailer {
+    background-color: #902724;
+    border: none;
+    cursor: pointer;
+}
+
+.fav {
+    background-color: #F23C27;
+    border: 2px solid #F7D281;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.option {
+    width: 100%;
+    height: 35%;
+    position: relative;
+    top: 5%;
+}
+
+.op1 {
+    width: 15%;
+    height: 100%;
+    margin-left: 20px;
+    float: left;
+}
+
+.op2 {
+    width: 15%;
+    height: 100%;
+    margin-left: 20px;
+    float: left;
+}
+
+.op3 {
+    width: 15%;
+    height: 100%;
+    margin-left: 20px;
+    float: left;
+}
+
+.op4 {
+    width: 15%;
+    height: 100%;
+    margin-left: 20px;
+    float: left;
+}
+
+.op5 {
+    width: 15%;
+    height: 100%;
+    margin-left: 20px;
+    float: left;
+}
+
+.op6 {
+    width: 15%;
+    height: 100%;
+    margin-left: 30px;
+    float: left;
+}
+
+.box {
+    border-radius: 20px;
+    border: 3px solid #F23C27;
+    background: #F7D281;
+    width: 80%;
+    height: 90%;
+    position: relative;
+    top: 5%;
+    left: 10%;
+}
+
+.box1 {
+    box-shadow: 0px 4px 46px 0px rgba(0, 0, 0, 0.75);
+}
+
+.option img {
+    width: 80%;
+    height: 70%;
+    position: relative;
+    top: 5%;
+    left: 10%;
+}
+
+.box p {
+    color: #1A323E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    top: 5%;
+}
+
+.box1 p {
+    color: #1A323E;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    top: 10%;
+}

@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="login.css">
-        <title>Halaman Login</title>
-        <!–[if lt IE 9]> <script src=”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”></script> <![endif]–>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Halaman Login</title>
+    <!–[if lt IE 9]>
+        <script src=”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”></script>
+        <![endif]–>
     </head>
     <body>
         <div class="box"></div>
         <div class="content">
             <p>USER LOGIN</p>
+            <form action="" method="post" enctype="multipart/form-data">
             <div class="input email">
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="39" viewBox="0 0 45 39" fill="none" class="img-form">
                     <path d="M5.625 8.53125C4.85156 8.53125 4.21875 9.07969 4.21875 9.75V11.4334L19.3799 22.2193C21.1992 23.5143 23.8096 23.5143 25.6289 22.2193L40.7812 11.4334V9.75C40.7812 9.07969 40.1484 8.53125 39.375 8.53125H5.625ZM4.21875 16.1637V29.25C4.21875 29.9203 4.85156 30.4688 5.625 30.4688H39.375C40.1484 30.4688 40.7812 29.9203 40.7812 29.25V16.1637L28.3008 25.0453C24.9258 27.4447 20.0654 27.4447 16.6992 25.0453L4.21875 16.1637ZM0 9.75C0 7.06113 2.52246 4.875 5.625 4.875H39.375C42.4775 4.875 45 7.06113 45 9.75V29.25C45 31.9389 42.4775 34.125 39.375 34.125H5.625C2.52246 34.125 0 31.9389 0 29.25V9.75Z" fill="#902724"/>
@@ -49,6 +53,7 @@
                     });
                 </script>
             </div>
+            </form>
         </div>
         <img src="images/spiderman.png" class="spider">
     </body>

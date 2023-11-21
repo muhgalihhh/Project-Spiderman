@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="register.css">
-        <title>Halaman Register</title>
-        <!–[if lt IE 9]> <script src=”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”></script> <![endif]–>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Halaman Register</title>
+    <!–[if lt IE 9]>
+        <script src=”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”></script>
+        <![endif]–>
     </head>
     <body>
         <div class="box"></div>

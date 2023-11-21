@@ -135,19 +135,11 @@ p {
     left: 20%;
 }
 
-.btn a {
-    border-radius: 6px;
-    border: #902724;
-    text-decoration: none;
-}
-
-.btn a:hover {
-    text-decoration: underline;
-}
-
 .btn-login {
     background: #902724;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	border: none;
+    border-radius: 10px;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     font-style: normal;
@@ -157,12 +149,14 @@ p {
     color: #FFF;
     position: relative;
     left: 10%;
-
+	cursor: pointer;
 }
 
 .btn-register {
     background-color: #d9d9d9;
     background-blend-mode: soft-light;
+	border: none;
+    border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     color: #902724;
     font-family: Roboto, sans-serif;
@@ -174,4 +168,5 @@ p {
     color: #902724;
     position: relative;
     left: 15%;
+	cursor: pointer;
 }

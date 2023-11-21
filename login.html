@@ -35,8 +35,19 @@
                 <a href="#"> Forgot Password?</a>
             </div>
             <div class="btn">
-                <a href="home.html" class="btn-login">Login</a>
-                <a href="register.html" class="btn-register">Register</a>
+                <button id="login" class="btn-login">Login</button>
+                <script>
+                    document.getElementById('login').addEventListener('click', function() {
+                        alert ('Berhasil Login!');
+                        window.location.href = 'home.html'; 
+                    });
+                </script>
+                <button id="register" class="btn-register">Register</button>
+                <script>
+                    document.getElementById('register').addEventListener('click', function() {
+                        window.location.href = 'register.html'; 
+                    });
+                </script>
             </div>
         </div>
         <img src="images/spiderman.png" class="spider">

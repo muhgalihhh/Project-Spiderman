@@ -156,6 +156,8 @@ p {
 .btn-login {
     background-color: #d9d9d9;
     background-blend-mode: soft-light;
+	border: none;
+    border-radius: 10px;
     color: #902724;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-family: Roboto, sans-serif;
@@ -166,12 +168,15 @@ p {
     padding: 10px 40px 10px 40px;
     position: relative;
     left: 10%;
+	cursor: pointer;
 
 }
 
 .btn-register {
     background: #902724;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	border: none;
+    border-radius: 10px;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     font-style: normal;
@@ -181,4 +186,5 @@ p {
     color: #FFF;
     position: relative;
     left: 15%;
+	cursor: pointer;
 }

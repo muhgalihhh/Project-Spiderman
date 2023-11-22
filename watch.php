@@ -24,7 +24,7 @@
                         window.location.href = 'login.php'; 
                     });
                 </script>
-            </div>
+            </div> 
         </div>
         <div class="desc">
             <div class="left">

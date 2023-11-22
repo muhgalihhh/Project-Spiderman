@@ -14,14 +14,14 @@
         <div class="header">
             <img src="images/spiderman-clipart.png" class="icon">
             <div class="nav">
-                <a href="home.html" class="link">HOME</a>
-                <a href="movies.html" class="movies">MOVIES</a>
-                <a href="favorite.html" class="link">FAVORITE</a>
+                <a href="home.php" class="link">HOME</a>
+                <a href="movies.php" class="movies">MOVIES</a>
+                <a href="favorite.php" class="link">FAVORITE</a>
                 <button id="button" class="logout">LOGOUT</button>
                 <script>
                     document.getElementById('button').addEventListener('click', function() {
                         alert('Berhasil Logout!');
-                        window.location.href = 'login.html'; 
+                        window.location.href = 'login.php'; 
                     });
                 </script>
             </div>
@@ -99,7 +99,7 @@
                 <button id="back" class="back">BACK</button>
                 <script>
                     document.getElementById('back').addEventListener('click', function() {
-                        window.location.href = 'home.html'; 
+                        window.location.href = 'home.php'; 
                     });
                 </script>
             </div>

@@ -25,8 +25,8 @@
             <img src="images/spiderman-clipart.png" class="icon">
             <div class="nav">
                 <a href="#" class="home">HOME</a>
-                <a href="movies.html" class="link">MOVIES</a>
-                <a href="favorite.html" class="link">FAVORITE</a>
+                <a href="movies.php" class="link">MOVIES</a>
+                <a href="favorite.php" class="link">FAVORITE</a>
                 <button id="button" class="logout">LOGOUT</button>
                 <script>
                     document.getElementById('button').addEventListener('click', function() {
@@ -50,7 +50,7 @@
             <button id="start" class="start">Get Started</button>
             <script>
                 document.getElementById('start').addEventListener('click', function() {
-                    window.location.href = 'movies.html'; 
+                    window.location.href = 'movies.php'; 
                 });
             </script>
         </div>

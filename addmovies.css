@@ -1,0 +1,182 @@
+@import url('//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(117deg, #F23C27 1.13%, rgba(144, 39, 36, 0.91) 74.23%);
+    background-size: cover;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100vh;
+}
+
+.box {
+    border-radius: 15px;
+    width: 80%;
+    height: 90%;
+    position: relative;
+    top: 5%;
+    left: 10%;
+}
+
+.box img {
+    background-size: cover;
+    border-radius: 15px;
+    mix-blend-mode: soft-light;
+    filter: blur(2.5px);
+    width: 100%;
+    height: 100%;
+}
+
+.box h1 {
+    color: #1A323E;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    bottom: 95%;
+}
+
+form {
+    color: #F7D281;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Roboto, sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 80%;
+    height: 70%;
+    position: relative;
+    bottom: 90%;
+    left: 10%;
+}
+
+.label1 {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    height: 10%;
+    margin-bottom: 20px;
+}
+
+.sinopsis {
+    position: relative;
+    bottom: 120%;
+}
+
+.trailer {
+    position: relative;
+    top: 70%;
+}
+
+.poster {
+    position: relative;
+    top: 40%;
+}
+
+.input1 {
+    width: 60%;
+    height: 80%;
+    position: relative;
+    left: 15%;
+    bottom: 20%;
+    border-radius: 5px;
+    border: none;
+}
+
+.input2 {
+    width: 60%;
+    height: 80%;
+    position: relative;
+    left: 19.75%;
+    bottom: 10%;
+    border-radius: 5px;
+    border: none;
+}
+
+.input3 {
+    width: 60%;
+    height: 80%;
+    position: relative;
+    left: 22.5%;
+    bottom: 20%;
+    border-radius: 5px;
+    border: none;
+}
+
+.input4{
+    position: relative;
+    left: 18.5%;
+    bottom: 20%;
+    border-radius: 5px;
+    border: none;
+}
+
+.input5 {
+    width: 60%;
+    height: 80%;
+    position: relative;
+    left: 23%;
+    bottom: 20%;
+    top: 60%;
+    border-radius: 5px;
+    border: none;
+}
+
+.input6 {
+    width: 60%;
+    height: 80%;
+    position: relative;
+    left: 22.5%;
+    top: 20%;
+    border-radius: 5px;
+    border: none;
+}
+
+.button {
+    width: 60%;
+    height: 10%;
+    position: relative;
+    left: 50%;
+}
+
+.add {
+    border-radius: 8px;
+    border: none;
+    background: #902724;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 20%;
+    height: 100%;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.cancel {
+    border-radius: 8px;
+    border: 3px solid #FFF;
+    background: transparent;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+}

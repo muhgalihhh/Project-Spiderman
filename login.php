@@ -15,9 +15,11 @@
             $_SESSION["role"] = $data['role']; // Ganti "role" dengan kolom yang sesuai pada tabel
             
             if ($_SESSION["role"] == "admin") {
-                echo "<script>alert('Berhasil Login!'); window.location.href='admin.php';</script>";
+                echo "<script>alert('Berhasil Login!');</script>";
+                header("location:home-admin.php");
             } else if ($_SESSION["role"] == "user") {
-                echo "<script>alert('Berhasil Login!'); window.location.href='home.php';</script>";
+                echo "<script>alert('Berhasil Login!');</script>";
+                header("location:home.php");
             }
         } else {
             echo "<script>alert('Gagal Login!'); window.location.href='login.php';</script>";

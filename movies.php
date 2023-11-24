@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="movies.css">
     <title>Movies</title>
-    <!–[if lt IE 9]>
-        <script src=”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”></script>
-        <![endif]–>
     </head>
     <body>
         <div class="header">

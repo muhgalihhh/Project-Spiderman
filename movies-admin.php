@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    // jika session role kosong
+    if(!isset($_SESSION['role'])){
+        header('location:login.php');
+    }
+    
+    require_once "koneksi.php"
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -40,18 +50,25 @@
             });
         </script>
         <div class="content">
-				<div class="box box1">
-                    <img src="images/spiderman comics.jpeg">
-                    <button id="hapus" class="hapus">X</button>
-                    <p>Spider-Man</p>
-                    <button id="watch1" class="watch">Watch</button>
-                    <script>
-                        document.getElementById('watch1').addEventListener('click', function() {
-                            window.location.href = 'watch.html'; 
-                        });
-                    </script>
-                </div>
-                <div class="box box2">
+
+        <?php
+            $query = "SELECT * FROM film";
+            $result = mysqli_query($koneksi, $query);
+            $box = 1;
+            while($row = mysqli_fetch_assoc($result)){
+        ?>
+            <div class="box box<?=$box?>">
+                <img src="<?=$row['gambar']?>">
+                <a href="hapus.php?id=<?=$row['id']?>"><button id="hapus" class="hapus">X</button></a>
+                <p><?=$row['judul']?></p>
+                <a href="watch.php?id=<?=$row['id']?>" class="watch"><button class="watch">Watch</button></a>
+            </div>
+        <?php
+        $box++;
+            }
+        ?>
+                
+                <!-- <div class="box box2">
                     <img src="images/no way.jpeg">
                     <button id="hapus" class="hapus">X</button>
                     <p>Spider-Man <br> No Way Home</p>
@@ -80,7 +97,7 @@
                     <button id="hapus" class="hapus">X</button>
                     <p>Spider-Man Across <br> The Spider-Verse</p>
                     <button class="watch">Watch</button>
-                </div>
+                </div> -->
         </div>
     </body>
 </html>

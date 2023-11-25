@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="addmovies.css">
-        <title>Add Movies</title>
-        <!–[if lt IE 9]> <script src=”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”></script> <![endif]–>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addmovies.css">
+    <title>Add Movies</title>
+    <!–[if lt IE 9]>
+        <script src=”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”></script>
+        <![endif]–>
+</head>
     <body>
         <div class="box">
             <img src="images/Homem aranha 2.png">
             <h1>ADD MOVIES</h1>
-            <form method="post" id="formadd">
+            <form method="post" id="formadd" action="">
                 <div class="label1">
                     <label for="">Judul Film</label>
                     <input type="text" name="judul" class="input1">
@@ -33,32 +36,34 @@
                     <input type="text" name="trailer" class="input5">
                 </div>
                 <div class="label1">
+                    <label for="" class="trailer">Link Film</label>
+                    <input type="text" name="linkfilm" class="input6">
+                </div>
+                <div class="label1">
                     <label for="" class="poster">Poster</label>
-                    <input type="file" name="poster" accept="image/*" class="input6"><br>
+                    <input type="file" name="poster" accept="image/*" class="input7"><br>
                 </div>
                 <div class="button">
-                    <button id="add" class="add">+ADD</button>
-                    <input type="button" value="CANCEL" class="cancel" onclick="kosongkanForm()">
+                    <button type="submit" name="submit" id="add" class="add">+ADD</button>
+                    <input type="reset" value="CANCEL" class="cancel">
                 </div>
             </form>
         </div>
-
-        <script>
+        <!-- <script>
             function kosongkanForm() {
                 // Mengambil referensi formulir
                 var form = document.getElementById("formadd");
-    
+                
                 // Mengosongkan nilai pada setiap elemen formulir
                 for (var i = 0; i < form.elements.length; i++) {
                     var element = form.elements[i];
-    
+                    
                     // Mengosongkan nilai untuk input teks, textarea, dan lainnya
                     if (element.type !== "button") {
                         element.value = "";
                     }
                 }
             }
-        </script>
-
+        </script> -->
     </body>
 </html>

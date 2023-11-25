@@ -25,8 +25,8 @@
             <img src="images/spiderman-clipart.png" class="icon">
             <div class="nav">
                 <a href="#" class="home">HOME</a>
-                <a href="movies.php" class="link">MOVIES</a>
-                <a href="favorite.php" class="link">FAVORITE</a>
+                <a href="movies-admin.php" class="link">MOVIES</a>
+                <a href="#" class="link"><?=strtoupper($_SESSION['role'])?></a>
                 <button id="button" class="logout">LOGOUT</button>
                 <script>
                     document.getElementById('button').addEventListener('click', function() {

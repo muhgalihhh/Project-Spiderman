@@ -22,7 +22,8 @@
 						</div>
 						<script>
 							function showAlert() {
-								document.getElementById('customAlert').style.display = 'block';
+								closeAlert();
+                                document.getElementById('customAlert').style.display = 'block';
 							}
 
 							function closeAndRedirect() {
@@ -43,7 +44,8 @@
 						</div>
 						<script>
 							function showAlert() {
-								document.getElementById('customAlert').style.display = 'block';
+								closeAlert();
+                                document.getElementById('customAlert').style.display = 'block';
 							}
 
 							function closeAndRedirect() {
@@ -65,7 +67,8 @@
 						</div>
 						<script>
 							function showAlert() {
-								document.getElementById('customAlert').style.display = 'block';
+								closeAlert();
+                                document.getElementById('customAlert').style.display = 'block';
 							}
 
 							function closeAndRedirect() {

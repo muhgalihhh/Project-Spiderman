@@ -15,14 +15,69 @@
             $_SESSION["role"] = $data['role']; // Ganti "role" dengan kolom yang sesuai pada tabel
             
             if ($_SESSION["role"] == "admin") {
-                echo "<script>alert('Berhasil Login!');</script>";
-                header("location:home-admin.php");
+                echo "
+						<div class='custom-alert' id='customAlert'>
+							<p>LOGIN SUCCESS!!!</p>
+							<button onclick='closeAndRedirect()' class='ok'>OK</button>
+						</div>
+						<script>
+							function showAlert() {
+								document.getElementById('customAlert').style.display = 'block';
+							}
+
+							function closeAndRedirect() {
+								closeAlert();
+								window.location.href = 'home-admin.php';
+							}
+
+							function closeAlert() {
+								document.getElementById('customAlert').style.display = 'none';
+							}
+						</script>
+					";
             } else if ($_SESSION["role"] == "user") {
-                echo "<script>alert('Berhasil Login!');</script>";
-                header("location:home.php");
+                echo "
+						<div class='custom-alert' id='customAlert'>
+							<p>LOGIN SUCCESS!!!</p>
+							<button onclick='closeAndRedirect()' class='ok'>OK</button>
+						</div>
+						<script>
+							function showAlert() {
+								document.getElementById('customAlert').style.display = 'block';
+							}
+
+							function closeAndRedirect() {
+								closeAlert();
+								window.location.href = 'home.php';
+							}
+
+							function closeAlert() {
+								document.getElementById('customAlert').style.display = 'none';
+							}
+						</script>
+					";
             }
         } else {
-            echo "<script>alert('Gagal Login!'); window.location.href='login.php';</script>";
+            echo "
+					<div class='custom-alert' id='customAlert'>
+							<p>GAGAL LOGIN!!!</p>
+							<button onclick='closeAndRedirect()' class='ok'>OK</button>
+						</div>
+						<script>
+							function showAlert() {
+								document.getElementById('customAlert').style.display = 'block';
+							}
+
+							function closeAndRedirect() {
+								closeAlert();
+								window.location.href = 'login.php';
+							}
+
+							function closeAlert() {
+								document.getElementById('customAlert').style.display = 'none';
+							}
+						</script>
+				";
         }
     }
 ?>
@@ -64,30 +119,12 @@
                 <a href="#"> Forgot Password?</a>
             </div>
             <div class="btn">
-                <button type="submit" name="login" id="login" onclick="showAlert()" class="btn-login">Login</button>
+                <button type="button" name="login" id="login" onclick="showAlert()" class="btn-login">Login</button>
                 <a href="register.php" id="register" class="btn-register">Register</a>
             </div>
             </form>
         </div>
         <img src="images/spiderman.png" class="spider">
 		
-		<div class="custom-alert" id="customAlert">
-            <p>LOGIN SUCCESS!!!</p>
-            <button onclick="closeAndRedirect()" class="ok">OK</button>
-        </div>
-        <script>
-            function showAlert() {
-                document.getElementById("customAlert").style.display = "block";
-            }
-
-            function closeAndRedirect() {
-                closeAlert();
-                window.location.href = "home.php";
-            }
-
-            function closeAlert() {
-                document.getElementById("customAlert").style.display = "none";
-            }
-        </script>
     </body>
 </html>

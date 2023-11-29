@@ -64,11 +64,30 @@
                 <a href="#"> Forgot Password?</a>
             </div>
             <div class="btn">
-                <button type="submit" name="login" id="login" class="btn-login">Login</button>
+                <button type="submit" name="login" id="login" onclick="showAlert()" class="btn-login">Login</button>
                 <a href="register.php" id="register" class="btn-register">Register</a>
             </div>
             </form>
         </div>
         <img src="images/spiderman.png" class="spider">
+		
+		<div class="custom-alert" id="customAlert">
+            <p>LOGIN SUCCESS!!!</p>
+            <button onclick="closeAndRedirect()" class="ok">OK</button>
+        </div>
+        <script>
+            function showAlert() {
+                document.getElementById("customAlert").style.display = "block";
+            }
+
+            function closeAndRedirect() {
+                closeAlert();
+                window.location.href = "home.html";
+            }
+
+            function closeAlert() {
+                document.getElementById("customAlert").style.display = "none";
+            }
+        </script>
     </body>
 </html>

@@ -82,7 +82,7 @@
 
             function closeAndRedirect() {
                 closeAlert();
-                window.location.href = "home.html";
+                window.location.href = "home.php";
             }
 
             function closeAlert() {

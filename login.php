@@ -47,20 +47,13 @@
                 <a href="#"> Forgot Password?</a>
             </div>
             <div class="btn">
-                <button type="button" name="login" id="login" class="btn-login">Login</button>
+                <button type="submit" name="login" id="login" class="btn-login">Login</button>
                 <a href="register.php" id="register" class="btn-register">Register</a>
             </div>
-<<<<<<< Updated upstream
-            </form>
-        </div>
-        <img src="images/spiderman.png" class="spider">
-		
-    </body>
-=======
         </form>
     </div>
     <img src="images/spiderman.png" class="spider">
+
 </body>
 
->>>>>>> Stashed changes
 </html>

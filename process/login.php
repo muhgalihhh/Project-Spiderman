@@ -13,9 +13,15 @@ function loginUser($email, $password) {
         $_SESSION["role"] = $data['role']; // Ganti "role" dengan kolom yang sesuai pada tabel
 
         if ($_SESSION["role"] == "admin") {
+            $_SESSION['id'] = $data['id'];
+            $_SESSION['moviesurl'] = "movies-admin.php";
+            $_SESSION["homeurl"] = "home-admin.php";
             echo "<script>alert('Berhasil Login!');</script>";
             header("location:home-admin.php");
         } else if ($_SESSION["role"] == "user") {
+            $_SESSION['id'] = $data['id'];
+            $_SESSION['moviesurl'] = "movies.php";
+            $_SESSION["homeurl"] = "home.php";
             echo "<script>alert('Berhasil Login!');</script>";
             header("location:home.php");
         }

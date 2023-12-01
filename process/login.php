@@ -1,7 +1,6 @@
 <?php
 function loginUser($email, $password) {
-    global $koneksi; // Assuming $koneksi is defined in your included file
-
+    include '../koneksi.php';
     $query = mysqli_query($koneksi, "SELECT * FROM user WHERE email = '$email'");
     $data = mysqli_fetch_array($query);
 
@@ -17,16 +16,16 @@ function loginUser($email, $password) {
             $_SESSION['moviesurl'] = "movies-admin.php";
             $_SESSION["homeurl"] = "home-admin.php";
             echo "<script>alert('Berhasil Login!');</script>";
-            header("location:home-admin.php");
+            header("location:../home-admin.php");
         } else if ($_SESSION["role"] == "user") {
             $_SESSION['id'] = $data['id'];
             $_SESSION['moviesurl'] = "movies.php";
             $_SESSION["homeurl"] = "home.php";
             echo "<script>alert('Berhasil Login!');</script>";
-            header("location:home.php");
+            header("location:../home.php");
         }
     } else {
-        echo "<script>alert('Gagal Login!'); window.location.href='login.php';</script>";
+        echo "<script>alert('Gagal Login!'); window.location.href='../login.php';</script>";
     }
 }
 

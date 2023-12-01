@@ -1,6 +1,6 @@
 <?php
+    session_start();
     require_once "koneksi.php";
-    require_once "process/login.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
     <div class="box"></div>
     <div class="content">
         <p>USER LOGIN</p>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="process/login.php" method="post" enctype="multipart/form-data">
             <div class="input email">
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="39" viewBox="0 0 45 39" fill="none"
                     class="img-form">

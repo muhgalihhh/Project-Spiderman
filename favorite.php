@@ -13,7 +13,7 @@
 
 // Query untuk mengambil data favorit
         $sqlSelectFavorite = "SELECT favorite.id_favorite, film.gambar, film.judul FROM favorite
-                            JOIN film ON favorite.id_film = film.id_film";
+                      JOIN film ON favorite.id_film = film.id_film WHERE favorite.id_user = " . $_SESSION['id'];
         $resultFavorite = $koneksi->query($sqlSelectFavorite);
 ?>
 
@@ -67,11 +67,11 @@
                 <p>Spider-Man into The<br>Spider-Verse</p>
             </div> -->
             <?php
-                while ($rowFavorite = $resultFavorite->fetch_assoc()) {?>
+                while ($rowFavorite = mysqli_fetch_array($resultFavorite)) {
+                ?>
             <div class="box">
-                <form method="post" action="">
-                    <button type="submit" name="hapus" value="<?=$rowFavorite['id_favorite']?>">X</button>
-                </form>
+                <button type="submit" name="hapus"
+                    onclick="window.location.href='process/hapus-fav.php?id=<?=$rowFavorite['id_favorite']?>'">X</button>
                 <img src="<?=$rowFavorite['gambar']?>">
                 <p><?=$rowFavorite['judul']?></p>
             </div>

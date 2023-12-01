@@ -1,6 +1,6 @@
 <?php
+session_start();
 require_once "koneksi.php";
-require_once "process/register.php";
 ?>
 
 
@@ -17,7 +17,7 @@ require_once "process/register.php";
 <body>
     <div class="box"></div>
     <div class="content">
-        <form action="" method="post">
+        <form action="process/register.php" method="post">
             <p>REGISTER</p>
             <div class="input username">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40" viewBox="0 0 38 40" fill="none"

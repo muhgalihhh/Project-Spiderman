@@ -30,7 +30,7 @@
             <script>
             document.getElementById('button').addEventListener('click', function() {
                 alert('Berhasil Logout!');
-                window.location.href = 'login.php';
+                window.location.href = 'logout.php';
             });
             </script>
         </div>
@@ -39,7 +39,7 @@
     <button id="back" class="back">BACK</button>
     <script>
     document.getElementById('back').addEventListener('click', function() {
-        window.location.href = 'home.php';
+        window.location.href = '<?=$_SESSION['homeurl']?>';
     });
     </script>
     <button id="add" class="add">+ADD MOVIES</button>

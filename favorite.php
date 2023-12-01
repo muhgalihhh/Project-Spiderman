@@ -12,7 +12,7 @@
         }
 
 // Query untuk mengambil data favorit
-        $sqlSelectFavorite = "SELECT favorite.id_favorite, film.gambar, film.judul FROM favorite
+         $sqlSelectFavorite = "SELECT favorite.id_favorite, film.gambar, film.judul FROM favorite
                       JOIN film ON favorite.id_film = film.id_film WHERE favorite.id_user = " . $_SESSION['id'];
         $resultFavorite = $koneksi->query($sqlSelectFavorite);
 ?>
@@ -38,7 +38,7 @@
                 <script>
                 document.getElementById('button').addEventListener('click', function() {
                     alert('Berhasil Logout!');
-                    window.location.href = 'login.html';
+                    window.location.href = 'logout.php';
                 });
                 </script>
             </div>
@@ -70,16 +70,22 @@
                 while ($rowFavorite = mysqli_fetch_array($resultFavorite)) {
                 ?>
             <div class="box">
-                <button type="submit" name="hapus"
-                    onclick="window.location.href='process/hapus-fav.php?id=<?=$rowFavorite['id_favorite']?>'">X</button>
+                <button type="button" name="hapus" onclick="hapusFavorite(<?=$rowFavorite['id_favorite']?>)">X</button>
                 <img src="<?=$rowFavorite['gambar']?>">
                 <p><?=$rowFavorite['judul']?></p>
             </div>
-            }
+
             <?php
                 }
                 ?>
         </div>
+        <script>
+        function hapusFavorite(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus favorite ini?')) {
+                window.location.href = 'process/hapus-fav.php?id=' + id;
+            }
+        }
+        </script>
     </body>
 
     </html>

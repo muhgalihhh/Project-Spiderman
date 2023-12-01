@@ -1,3 +1,12 @@
+<?php
+session_start();
+// jika session role bukan user
+if ($_SESSION['role'] != "user") {
+    header('location:login.php');
+}
+include 'koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -33,43 +42,43 @@
     </script>
     <div class="content">
         <div class="left">
-            <div class="box box1">
-                <img src="images/spiderman comics.jpeg">
-                <p>Spider-Man</p>
-                <button id="watch1">Watch</button>
-                <script>
-                document.getElementById('watch1').addEventListener('click', function() {
-                    window.location.href = 'watch.php';
-                });
-                </script>
+            <?php
+            $box = 1;
+            $sql = "SELECT * FROM film";
+            $result = $koneksi->query($sql);
+
+            // Menampilkan data dalam card dan membaginya menjadi dua bagian (left dan right)
+            $films = $result->fetch_all(MYSQLI_ASSOC);
+            $halfCount = ceil(count($films) / 2);
+            $leftFilms = array_slice($films, 0, $halfCount);
+            $rightFilms = array_slice($films, $halfCount);
+        // Looping untuk setiap data film di bagian kiri
+        foreach ($leftFilms as $row) {
+            ?>
+            <div class="box box<?=$box?>">
+                <img src="<?=$row['gambar']?>" alt="<?=$row['judul']?>">
+                <p><?=$row['judul']?></p>
+                <button onclick="window.location.href = 'watch.php?id=<?=$row['id_film']?>'">Watch</button>
             </div>
-            <div class="box box2">
-                <img src="images/no way.jpeg">
-                <p>Spider-Man <br> No Way Home</p>
-                <button>Watch</button>
-            </div>
-            <div class="box box3">
-                <img src="images/spider verse.jpg">
-                <p>Spider-Man into <br> The Spider - Verse</p>
-                <button>Watch</button>
-            </div>
+            <?php
+        }
+        ?>
         </div>
+
         <div class="right">
-            <div class="box box1">
-                <img src="images/amazing.jpeg">
-                <p>The Amazing <br> Spider-Man 2</p>
-                <button>Watch</button>
+            <?php
+        // Looping untuk setiap data film di bagian kanan
+        foreach ($rightFilms as $row) {
+            ?>
+            <div class="box box<?=$box?>">
+                <img src="images/<?=$row['gambar']?>" alt="<?=$row['judul']?>">
+                <p><?=$row['judul']?></p>
+                <button onclick="watchMovie('<?=$row['id']?>')">Watch</button>
             </div>
-            <div class="box box2">
-                <img src="images/far from home.jpeg">
-                <p>Spider-Man <br> Far From Home</p>
-                <button>Watch</button>
-            </div>
-            <div class="box box3">
-                <img src="images/accors.jpeg">
-                <p>Spider-Man Across <br> The Spider-Verse</p>
-                <button>Watch</button>
-            </div>
+            <?php
+            $box++;
+        }
+        ?>
         </div>
     </div>
 </body>

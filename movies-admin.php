@@ -1,10 +1,9 @@
 <?php
     session_start();
-    // jika session role kosong
-    if(!isset($_SESSION['role'])){
+    // jika session role bukan admin
+    if($_SESSION['role'] != "admin"){
         header('location:login.php');
     }
-    
     require_once "koneksi.php";
     require_once "process/hapus-film.php";
 ?>

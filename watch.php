@@ -94,7 +94,7 @@
                         }
 
                 // Contoh penggunaan untuk rating 10
-                $filmRating = 8;
+                $filmRating = $film['rating'];
                 generateStarRating($filmRating);
                 ?>
 
@@ -159,7 +159,7 @@
             <button id="trailer" class="trailer">Trailer</button>
             <script>
             document.getElementById('trailer').addEventListener('click', function() {
-                window.location.href = 'https://youtu.be/t06RUxPbp_c?si=iczExYBcjqSs61dO';
+                window.location.href = '<?=$film['link_trailer']?>'
             });
             </script>
             <button id="fav" class="fav">Favorite</button>

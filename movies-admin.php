@@ -70,7 +70,7 @@
                     <img src="images/no way.jpeg">
                     <button id="hapus" class="hapus">X</button>
                     <p>Spider-Man <br> No Way Home</p>
-                    <button class="watch">Watch</button>
+                    <button class="watch">Watch</button> 
                 </div>
                 <div class="box box3">
                     <img src="images/spider verse.jpg">

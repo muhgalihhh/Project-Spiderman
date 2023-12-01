@@ -1,7 +1,9 @@
 <?php
+session_start();
+include "../koneksi.php";
 function addMovies($judul, $mc, $rating, $sinopsis, $trailer, $linkfilm, $poster)
 {
-    global $koneksi;
+    include '../koneksi.php';
     $query = "INSERT INTO film (judul, MC, deskripsi, rating, link_trailer, link_film, gambar) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($koneksi, $query);
 
@@ -26,7 +28,7 @@ if (isset($_POST['submit'])) {
     $poster = $_FILES['poster']['name'];
     $tmp = $_FILES['poster']['tmp_name'];
     $dir = "../images/poster-film/";
-    $path = "/images/poster-film/";
+    $path = "images/poster-film/";
     $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif');
     $file_extension = strtolower(pathinfo($poster, PATHINFO_EXTENSION)); // Convert to lowercase
     if(!in_array($file_extension, $allowed_extensions)) {
@@ -52,6 +54,7 @@ if (isset($_POST['submit'])) {
 function showMessage($message)
 {
     echo "<script>alert('$message'); ";
+    echo "window.location.href='../movies-admin.php';</script>";
 }
 
 function showError($message)

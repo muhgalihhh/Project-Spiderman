@@ -14,7 +14,7 @@
         $id = $_GET['id'];
         $result = deleteFilm($id);
         if ($result) {
-            header("location:movies-admin.php");
+            echo "<script>alert('Berhasil Hapus Film!'); window.location.href='../movies-admin.php';</script>";
         } else {
             echo "<script>alert('Gagal Hapus Film!'); window.location.href='../movies-admin.php';</script>";
         }

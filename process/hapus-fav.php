@@ -10,7 +10,6 @@
         $result = deleteFavorite($id);
         if ($result) {
             echo "<script>alert('Berhasil Hapus Favorite!'); window.location.href='../favorite.php';</script>";
-            header("location:../favorite.php");
         } else {
             echo "<script>alert('Gagal Hapus Favorite!'); window.location.href='../favorite.php';</script>";
         }

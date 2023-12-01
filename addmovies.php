@@ -1,6 +1,9 @@
 <?php
     session_start();
    // jika role bukan admin
+    if($_SESSION['role'] != "admin"){
+        header('location:login.php');
+    }
     include 'koneksi.php';
     ?>
 

@@ -46,7 +46,7 @@
         <button id="back" class="back">BACK</button>
         <script>
         document.getElementById('back').addEventListener('click', function() {
-            window.location.href = 'home.php';
+            window.location.href = '<?=$_SESSION['homeurl']?>';
         });
         </script>
         <h1>FAVORITE</h1>

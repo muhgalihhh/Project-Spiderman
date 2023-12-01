@@ -48,7 +48,7 @@
         <button id="start" class="start">Get Started</button>
         <script>
         document.getElementById('start').addEventListener('click', function() {
-            window.location.href = 'movies-admin.php';
+            window.location.href = '<?=$_SESSION['moviesurl']?>';
         });
         </script>
     </div>

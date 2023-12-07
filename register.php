@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['role'])){
+    header("Location: index.php");
+    exit;
+}
 require_once "koneksi.php";
 ?>
 
@@ -58,7 +62,7 @@ require_once "koneksi.php";
                 <a href="#"> Forgot Password?</a>
             </div>
             <div class="btn">
-                <a href="login.php" id="login" class="btn-login">Login</a>
+                <a href="index.php" id="login" class="btn-login">Login</a>
                 <button id="register" type="submit" name="register" class="btn-register">Register</button>
         </form>
     </div>

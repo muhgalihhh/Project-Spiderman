@@ -20,12 +20,12 @@ function loginUser($email, $password) {
         } else if ($_SESSION["role"] == "user") {
             $_SESSION['id'] = $data['id'];
             $_SESSION['moviesurl'] = "movies.php";
-            $_SESSION["homeurl"] = "home.php";
+            $_SESSION["homeurl"] = "home.php"; 
             echo "<script>alert('Berhasil Login!');</script>";
             header("location:../home.php");
         }
     } else {
-        echo "<script>alert('Gagal Login!'); window.location.href='../login.php';</script>";
+        echo "<script>alert('Gagal Login!'); window.location.href='../index.php';</script>";
     }
 }
 

@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!isset($_SESSION['role'])){
-        header('location:login.php');
+        header('location:index.php');
     }
     require_once 'koneksi.php';
     if(isset($_GET['id'])){

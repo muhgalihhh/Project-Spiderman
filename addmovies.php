@@ -2,7 +2,7 @@
     session_start();
    // jika role bukan admin
     if($_SESSION['role'] != "admin"){
-        header('location:login.php');
+        header('location:index.php');
     }
     include 'koneksi.php';
     ?>

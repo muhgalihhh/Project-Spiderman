@@ -2,7 +2,7 @@
 session_start();
 // jika session role bukan user
 if ($_SESSION['role'] != "user") {
-    header('location:login.php');
+    header('location:index.php');
 }
 include 'koneksi.php';
 ?>
@@ -28,7 +28,7 @@ include 'koneksi.php';
             <script>
             document.getElementById('button').addEventListener('click', function() {
                 alert('Berhasil Logout!');
-                window.location.href = 'login.php';
+                window.location.href = 'index.php';
             });
             </script>
         </div>

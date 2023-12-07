@@ -3,7 +3,7 @@
     require_once "koneksi.php";
     // jika session role kosong
     if (!isset($_SESSION['role'])) {
-        header('location:login.php');
+        header('location:index.php');
     }
             if (isset($_POST['hapus'])) {
             $idFavorite = $_POST['hapus'];
